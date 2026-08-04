@@ -1,0 +1,13 @@
+# AI Portfolio
+aiportfolio.beetikmx.com {
+    root * /var/www/RGL-Portfolio
+    encode gzip zstd
+    try_files {path} /index.html
+    file_server
+
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        X-Frame-Options SAMEORIGIN
+    }
+}
