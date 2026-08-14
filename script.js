@@ -28,7 +28,7 @@ if (timeline) {
     const progress = Math.min(1, Math.max(0, (viewportGuide - bounds.top) / travel));
     const currentScrollY = window.scrollY;
 
-    timeline.style.setProperty("--timeline-progress", progress.toFixed(4));
+    timeline.style.setProperty("--timeline-progress", `${(progress * 100).toFixed(2)}%`);
     timeline.classList.toggle("scrolling-up", currentScrollY < previousScrollY);
     timeline.classList.toggle("is-active", progress > 0 && progress < 1);
 

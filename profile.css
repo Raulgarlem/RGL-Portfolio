@@ -37,7 +37,7 @@
 .timeline article::before{content:"";position:absolute;top:.5rem;left:-3.75rem;width:9px;height:9px;border:1px solid var(--gold);border-radius:50%;background:#fff}
 .timeline article+article::after{display:none}
 .timeline-marker{position:absolute;z-index:2;top:.5rem;bottom:.5rem;left:.25rem;width:1px;pointer-events:none}
-.timeline-marker>span{position:absolute;top:calc(var(--timeline-progress,0)*100%);left:50%;width:25px;height:25px;border:6px solid #fff2c9;border-radius:50%;background:var(--gold);box-shadow:0 4px 12px #ffb00055;transform:translate(-50%,-50%);transition:box-shadow .2s}
+.timeline-marker>span{position:absolute;top:var(--timeline-progress,0%);left:50%;width:25px;height:25px;border:6px solid #fff2c9;border-radius:50%;background:#ffb000;box-shadow:0 4px 12px #ffb00055;transform:translate(-50%,-50%);transition:box-shadow .2s}
 .timeline.is-active .timeline-marker>span{box-shadow:0 4px 12px #ffb00066,0 0 0 5px #ffb00018}
 .timeline-marker i{position:absolute;top:50%;left:50%;width:6px;height:6px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translate(-50%,-65%) rotate(45deg);transition:transform .22s ease}
 .timeline.scrolling-up .timeline-marker i{transform:translate(-50%,-35%) rotate(225deg)}
