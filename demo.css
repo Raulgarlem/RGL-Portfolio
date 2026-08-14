@@ -21,4 +21,9 @@
 .judge-panel h3{margin:0 0 1rem;color:var(--gold);font:700 .82rem var(--mono);letter-spacing:.2em;text-transform:uppercase}
 .judge-panel ul{margin:0;padding-left:1.6rem;color:#e1e5e2;font-size:clamp(1rem,1.8vw,1.18rem);line-height:1.75}
 .judge-panel li+li{margin-top:.7rem}
+.live-project-link{display:inline-flex;align-items:center;gap:1.5rem;margin-top:1.4rem;padding:.85rem 1.2rem;border:1px solid #ffb00070;border-radius:999px;color:var(--gold);font:700 .78rem var(--mono);letter-spacing:.07em;text-decoration:none;text-transform:uppercase;transition:color .2s,background .2s,transform .2s}
+.live-project-link:hover{color:var(--ink);background:var(--gold);transform:translateY(-2px)}
+.live-project-link span{font-size:1.1rem}
+.live-project-link.light-link{border-color:var(--ink);color:var(--ink)}
+.live-project-link.light-link:hover{border-color:var(--ink);background:var(--ink);color:white}
 @media(max-width:760px){.demo-heading{margin-bottom:2.5rem}.video-frame video{height:min(68vh,620px)}.judge{margin-top:3.5rem}.judge-badge{min-width:210px;padding:1rem 1.8rem}.judge-panel{border-radius:15px}.judge-panel ul{padding-left:1.25rem}}
