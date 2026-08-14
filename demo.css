@@ -1,60 +1,24 @@
-.demo {
-  background: var(--deep);
-  color: var(--cream);
-}
-
-.demo .number {
-  color: var(--sage);
-  border-color: #ffffff26;
-}
-
-.demo-heading {
-  max-width: 850px;
-  margin-bottom: 4rem;
-}
-
-.demo-heading h2 {
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
-}
-
-.demo-heading > p:last-child {
-  max-width: 680px;
-  color: var(--sage);
-  font-size: 1.1rem;
-}
-
-.video-frame {
-  position: relative;
-  max-width: 1180px;
-  margin: auto;
-  padding: clamp(.45rem, 1vw, .8rem);
-  background: linear-gradient(135deg, var(--gold), #e88400);
-  box-shadow: 0 35px 80px #00000055;
-}
-
-.video-frame::before {
-  content: "LIVE DEMO";
-  position: absolute;
-  z-index: 1;
-  top: 1.5rem;
-  left: 1.5rem;
-  padding: .45rem .7rem;
-  background: var(--gold);
-  color: var(--ink);
-  font: 500 .65rem var(--mono);
-  letter-spacing: .14em;
-  pointer-events: none;
-}
-
-.video-frame video {
-  display: block;
-  width: 100%;
-  max-height: 75vh;
-  background: #000;
-  object-fit: contain;
-}
-
-@media (max-width: 760px) {
-  .demo-heading { margin-bottom: 2.5rem; }
-  .video-frame::before { top: 1rem; left: 1rem; }
-}
+.demo{background:var(--deep);color:var(--cream)}
+.demo .number{color:var(--sage);border-color:#ffffff26}
+.demo-heading{max-width:850px;margin:0 auto 4rem;text-align:center}
+.demo-heading h2{font-size:clamp(2.8rem,5vw,5.5rem)}
+.demo-heading>p:last-child{max-width:680px;margin-inline:auto;color:var(--sage);font-size:1.1rem}
+.video-frame{position:relative;max-width:1120px;margin:auto;background:#000;border:1px solid #ffffff18;border-radius:14px;overflow:hidden;box-shadow:0 35px 80px #0008}
+.video-frame video{display:block;width:100%;height:min(72vh,720px);background:#000;object-fit:contain}
+.judge{max-width:1120px;margin:5rem auto 0;text-align:center}
+.judge-label{margin:0 0 1.7rem;color:var(--sage);font:600 .9rem var(--mono);letter-spacing:.25em;text-transform:uppercase}
+.judge-badge{display:inline-flex;align-items:center;justify-content:center;gap:1rem;min-width:250px;padding:1.35rem 2.5rem;border-radius:999px;background:#c5c5c5;color:#202137}
+.judge-badge svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8}
+.judge-badge strong{font:700 clamp(1.65rem,3vw,2.2rem) var(--serif);letter-spacing:.03em;text-transform:uppercase}
+.judge-review{margin-top:2.8rem}
+.judge-review summary{display:inline-flex;align-items:center;gap:.8rem;padding:.75rem 1.5rem;border:1px solid #ffffff20;border-radius:999px;color:var(--gold);font-weight:700;cursor:pointer;list-style:none;transition:border-color .2s,background .2s}
+.judge-review summary::-webkit-details-marker{display:none}
+.judge-review summary:hover{border-color:#ffb00070;background:#ffffff08}
+.judge-review summary span{width:.65rem;height:.65rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+.judge-review[open] summary span{transform:rotate(225deg) translate(-2px,-2px)}
+.judge-panel{margin-top:2rem;padding:clamp(1.6rem,4vw,3rem);border:1px solid #ffffff1c;border-radius:22px;background:#ffffff0a;text-align:left}
+.judge-panel section+section{margin-top:2.5rem}
+.judge-panel h3{margin:0 0 1rem;color:var(--gold);font:700 .82rem var(--mono);letter-spacing:.2em;text-transform:uppercase}
+.judge-panel ul{margin:0;padding-left:1.6rem;color:#e1e5e2;font-size:clamp(1rem,1.8vw,1.18rem);line-height:1.75}
+.judge-panel li+li{margin-top:.7rem}
+@media(max-width:760px){.demo-heading{margin-bottom:2.5rem}.video-frame video{height:min(68vh,620px)}.judge{margin-top:3.5rem}.judge-badge{min-width:210px;padding:1rem 1.8rem}.judge-panel{border-radius:15px}.judge-panel ul{padding-left:1.25rem}}
