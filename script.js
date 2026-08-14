@@ -1,3 +1,26 @@
+const passportSkills = document.querySelector(".passport-skills");
+const experienceCard = document.querySelector(".experience-card");
+
+if (passportSkills && experienceCard) {
+  const certificateCard = document.createElement("article");
+  certificateCard.className = "certificate-card reveal";
+  certificateCard.setAttribute("aria-labelledby", "certificate-title");
+  certificateCard.innerHTML = `
+    <div class="certificate-seal" aria-hidden="true"><span>AI</span></div>
+    <div class="certificate-copy">
+      <p class="certificate-kicker">Kanz verified credential</p>
+      <h3 id="certificate-title">AI Workshop Completion Certificate</h3>
+      <p>RememberMe: Voice-First AI for Family Coordination</p>
+      <dl>
+        <div><dt>Completed</dt><dd>July 2026</dd></div>
+        <div><dt>Certificate ID</dt><dd>KANZ-CMP-723630-CFEB</dd></div>
+      </dl>
+    </div>
+    <a class="certificate-link" href="assets/raul-garcia-lemus-ai-certificate.pdf" target="_blank" rel="noopener" aria-label="Open Raúl García Lemus AI certificate PDF">View certificate <span aria-hidden="true">↗</span></a>
+  `;
+  experienceCard.before(certificateCard);
+}
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
