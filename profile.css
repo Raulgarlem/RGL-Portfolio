@@ -35,7 +35,12 @@
 .timeline article{position:relative;padding:0 10rem 2.8rem 0}
 .timeline article:last-child{padding-bottom:0}
 .timeline article::before{content:"";position:absolute;top:.5rem;left:-3.75rem;width:9px;height:9px;border:1px solid var(--gold);border-radius:50%;background:#fff}
-.timeline article+article::after{content:"";position:absolute;top:-1.15rem;left:-4.2rem;width:21px;height:21px;border:6px solid #fff2c9;border-radius:50%;background:var(--gold);transform:translate(-1px,-50%)}
+.timeline article+article::after{display:none}
+.timeline-marker{position:absolute;z-index:2;top:.5rem;bottom:.5rem;left:.25rem;width:1px;pointer-events:none}
+.timeline-marker>span{position:absolute;top:calc(var(--timeline-progress,0)*100%);left:50%;width:25px;height:25px;border:6px solid #fff2c9;border-radius:50%;background:var(--gold);box-shadow:0 4px 12px #ffb00055;transform:translate(-50%,-50%);transition:box-shadow .2s}
+.timeline.is-active .timeline-marker>span{box-shadow:0 4px 12px #ffb00066,0 0 0 5px #ffb00018}
+.timeline-marker i{position:absolute;top:50%;left:50%;width:6px;height:6px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translate(-50%,-65%) rotate(45deg);transition:transform .22s ease}
+.timeline.scrolling-up .timeline-marker i{transform:translate(-50%,-35%) rotate(225deg)}
 .timeline h4{margin:0;font:700 clamp(1.45rem,2.5vw,2rem) var(--serif)}
 .timeline-date{position:absolute;top:.25rem;right:0;margin:0;font:500 .72rem var(--mono);letter-spacing:.14em}
 .timeline .company{margin:.45rem 0 1rem;color:#11823d;font-weight:700}
@@ -43,4 +48,5 @@
 .timeline article>p:last-child{max-width:760px;margin-bottom:0;color:#606761}
 @media(max-width:980px){.passport-skills{grid-template-columns:1fr}.passport-card>p{min-height:0}.timeline article{padding-right:0}.timeline-date{position:static;margin-bottom:.45rem}}
 @media(max-width:760px){.competency-opening{padding-top:4rem}.identity{margin-bottom:6rem}.identity-rule{gap:1rem;margin-bottom:3rem}.identity img{width:180px;height:180px}.identity p{text-align:center;font-size:1.25rem}.profile-facts{max-width:none;margin:0}.passport-suite{margin-top:6rem;padding-top:4rem}.passport-header{display:block}.export-button{margin-top:1.5rem}.passport-card,.experience-card{padding:1.5rem}.passport-card li{min-height:64px}.timeline{margin-left:.25rem;padding-left:2.3rem}.timeline article::before{left:-2.4rem}.timeline article+article::after{left:-2.85rem}.timeline h4{font-size:1.45rem}}
-@media print{header,.hero,.demo,.quote,.project,.build,.hire,.future,footer,.number,.identity,.profile,.export-button{display:none!important}.competency-opening{padding:0!important}.passport-suite{margin:0;padding:0;border:0}.passport-skills{grid-template-columns:repeat(3,1fr);gap:.5rem}.passport-card,.experience-card{box-shadow:none;break-inside:avoid}.reveal{opacity:1!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){.timeline-marker>span{transition:none}.timeline-marker i{transition:none}}
+@media print{header,.hero,.demo,.quote,.project,.build,.hire,.future,footer,.number,.identity,.profile,.export-button{display:none!important}.competency-opening{padding:0!important}.passport-suite{margin:0;padding:0;border:0}.passport-skills{grid-template-columns:repeat(3,1fr);gap:.5rem}.passport-card,.experience-card{box-shadow:none;break-inside:avoid}.reveal{opacity:1!important;transform:none!important}.timeline-marker{display:none}}
